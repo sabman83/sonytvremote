@@ -1,2 +1,0 @@
-
-exports.tv = tv;
