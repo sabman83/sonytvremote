@@ -1,0 +1,36 @@
+<html>
+  <head>
+    <link rel="stylesheet" type="text/css" href="./css/remote.css" />
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  </head>
+  <body>
+    <div id="app" class="container">
+    <div class="wrapper">
+      <div class="left"><action-button :action='{url:"on", icon: "home", type: "Home"}'></action-button></div>
+      <div class="center"><action-button :action='{url:"on", icon: "power-off", type: "Power"}'></action-button></div>
+      <div class="right"><action-button :action='{url:"on", icon: "cogs", type: "menu"}'></action-button></div>
+      <div class="left"><app-button :action='{appName: "netflix", type: "netflix"}'></app-button></div>
+      <div class="center"><app-button :action='{appName: "prime", type: "prime"}'></app-button></div>
+      <div class="right"><app-button :action='{appName: "plex", type: "plex"}'></app-button></div>
+      <div class="three-col center"><action-button :action='{url:"on", icon: "chevron-up", type: "Up"}'></div>
+            <div class="right"><action-button :action='{url:"on", icon: "chevron-left", type: "Left"}'></action-button></div>
+      <div class="center"><action-button :action='{url:"on", icon: "square", type: "Confirm"}'></action-button></div>
+      <div class="left"><action-button :action='{url:"on", icon: "chevron-right", type: "Right"}'></action-button></div>
+      <div class="three-col center"><action-button :action='{url:"on", icon: "chevron-down", type: "Down"}'></div>
+      <div class="right"><action-button v-bind:action='{url:"on", icon: "backward", type: "Rewind"}'></action-button></div>
+      <div class="center"><action-button v-bind:action='{url:"on", icon: "play", type: "Play"}'>
+        </action-button><action-button v-bind:action='{url:"on", icon: "pause", type: "Pause"}'></action-button></div>
+      <div class="left"><action-button v-bind:action='{url:"on", icon: "forward", type: "Forward"}'></action-button></div>
+      <div class="right"><action-button v-bind:action='{url:"on", icon: "plus", type: "VolumeUp"}'></div>
+      <div class="center" style="font-weight: bold; font-size: large; padding-top: 0.5em;">VOLUME</div>
+      <div class="left"><action-button v-bind:action='{url:"on", icon: "minus", type: "VolumeDown"}'></div>
+      <div><action-button v-bind:action='{url:"on", icon: "undo", type: "Prev"}'></div>
+      <div><action-button v-bind:action='{url:"on", icon: "comment", type: "Subtitles"}'><i class="far fa-closed-captioning"></i></div>
+      <div><i class="fa fa-comment"></i></div>
+    </div>
+    </div>
+    <script src="js/index.js"></script>
+  </body>
+</html>

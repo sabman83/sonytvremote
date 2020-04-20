@@ -1,0 +1,40 @@
+.wrapper {
+  display: grid;
+  grid-template-columns:  100px 100px 100px;
+  grid-template-rows:  75px 75px 75px 75px 75px 75px 75px 75px 75px 75px;
+}
+
+.three-col {
+  grid-column-start:  1;
+  grid-column-end:  4;
+}
+
+.left {
+  text-align: left;
+}
+
+.center {
+  text-align:  center;
+}
+
+.right {
+  text-align:  end;
+}
+.appImage {
+ border-radius: 10%;
+}
+.container{
+  width: 320px;
+  height: 580px;
+  margin: 0 auto;
+  position: relative;
+  overflow: hidden;
+  top: 50px;
+  background: #73AD21;
+  padding: 30px;
+  -moz-border-radius: 10px;
+-webkit-border-radius: 10px;
+border-radius: 10px; /* future proofing */
+-khtml-border-radius: 10px; /* for old Konqueror browsers */
+}
+
