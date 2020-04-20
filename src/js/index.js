@@ -4,7 +4,7 @@ Vue.component("action-button", {
   computed: {
     faClass: function () {
       return (
-        '<i class="fa fa-' + this.action.icon + '" style="font-size:36px;"></i>'
+        '<i class="fa fa-' + this.action.icon + '" style="font-size:128px;"></i>'
       );
     },
   },

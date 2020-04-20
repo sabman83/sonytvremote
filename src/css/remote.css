@@ -1,7 +1,9 @@
 .wrapper {
   display: grid;
-  grid-template-columns:  100px 100px 100px;
-  grid-template-rows:  75px 75px 75px 75px 75px 75px 75px 75px 75px 75px;
+  width: 100%;
+  height: 100%;
+  grid-template-columns:  repeat(3, 1fr);
+  grid-template-rows:  repeat(10, 1fr);
 }
 
 .three-col {
@@ -21,11 +23,12 @@
   text-align:  end;
 }
 .appImage {
- border-radius: 10%;
+ border-radius: 6%;
+ height: 100px;
 }
 .container{
-  width: 320px;
-  height: 580px;
+  width: 100%;
+  height: 100%;
   margin: 0 auto;
   position: relative;
   overflow: hidden;
