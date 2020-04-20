@@ -4,7 +4,8 @@
   "description": "\"Personal Use Remote App\"",
   "main": "index.js",
   "dependencies": {
-    "bravia": "^1.3.1"
+    "bravia": "^1.3.1",
+    "express": "^4.17.1"
   },
   "devDependencies": {},
   "scripts": {
