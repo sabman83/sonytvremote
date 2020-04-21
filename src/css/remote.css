@@ -1,3 +1,7 @@
+body {
+  touch-action: none;
+}
+}
 .wrapper {
   display: grid;
   width: 100%;
