@@ -32,14 +32,31 @@ app.get('/app',function(req,res){
     });
 });
 app.get('/action',function(req,res){
-  tv.send(req.query.name)
+
+  if(req.query.name=="Power") {
+    tv.system.invoke('getPowerStatus')
+      .then(status => {
+        if(status.status == "active") {
+          sendAndRespond(tv, "PowerOff", res);
+        } else {
+          sendAndRespond(tv, "WakeUp", res);
+        }
+      })
+      .catch(error => console.error(error));
+  }
+  else {
+    sendAndRespond(tv, req.query.name, res);
+  }
+});
+
+function sendAndRespond(tv, action, res) {
+  tv.send(action)
     .then(success => {
-      console.log("SUCCESS with " + req.query.name);
+      console.log("SUCCESS with " + action);
       res.sendStatus(200)
     }
     , error => {
       console.log("ERROR : " + error);
       res.sendStatus(400);
     });
-});
-
+}
