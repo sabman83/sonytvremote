@@ -1,6 +1,5 @@
 body {
-  touch-action: none;
-}
+  touch-action: manipulation;
 }
 .wrapper {
   display: grid;
@@ -41,6 +40,9 @@ body {
   top: 50px;
   background: #fff;
   padding: 30px;
+      border: 10px solid #007eff;
+    border-radius: 102px;
+    border-style: double;
   -moz-border-radius: 10px;
 -webkit-border-radius: 10px;
 border-radius: 10px; /* future proofing */
