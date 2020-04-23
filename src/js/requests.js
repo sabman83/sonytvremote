@@ -1,5 +1,5 @@
 
-export  function send (url) {
+export function send (url) {
   return axios
           .get(url)
           .then(function (response) {

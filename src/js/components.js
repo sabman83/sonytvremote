@@ -1,3 +1,4 @@
+import { send } from './requests.js';
 Vue.component("action-button", {
   template: '<a v-on:click="func" v-html="faClass"> </a>',
   props: ["action"],
@@ -12,18 +13,9 @@ Vue.component("action-button", {
     func: function () {
       console.log(this.action);
       // Make a request for a user with a given ID
-      axios
-        .get("/action?name=" + this.action.type)
-        .then(function (response) {
-          // handle success
-          console.log("success : " + response);
-        })
-        .catch(function (error) {
-          // handle error
-          console.log("error : " + error);
-        });
+      send("/action?name=" + this.action.type);
     },
-  },
+  }
 });
 
 
@@ -38,17 +30,7 @@ Vue.component("app-button", {
   methods: {
     func: function () {
       console.log(this.action);
-      // Make a request for a user with a given ID
-      axios
-        .get("app?name=" + this.action.type)
-        .then(function (response) {
-          // handle success
-          console.log("success : " + response);
-        })
-        .catch(function (error) {
-          // handle error
-          console.log("error : " + error);
-        });
+      send("app?name=" + this.action.type);
     },
   }
 });
