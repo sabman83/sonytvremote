@@ -21,9 +21,6 @@ Vue.component("action-button", {
         .catch(function (error) {
           // handle error
           console.log("error : " + error);
-        })
-        .then(function () {
-          console.log("DONE");
         });
     },
   },
@@ -51,9 +48,6 @@ Vue.component("app-button", {
         .catch(function (error) {
           // handle error
           console.log("error : " + error);
-        })
-        .then(function () {
-          console.log("DONE");
         });
     },
   }
